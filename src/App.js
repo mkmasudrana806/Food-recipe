@@ -1,15 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Main from "./components/layout/Main";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./components/router/Router";
 
 function App() {
-  return (
-    <Main></Main>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;
-
 
 /*
 get single recipe by id:  http://localhost:3000/recipe/2
