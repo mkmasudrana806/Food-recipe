@@ -1,0 +1,7 @@
+
+
+@media screen and (max-width:576px) {
+    .chef-image{
+        height: 320px !important;
+    }
+}

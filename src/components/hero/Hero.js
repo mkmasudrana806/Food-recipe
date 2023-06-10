@@ -1,5 +1,4 @@
 import React from "react";
-import "./hero.css";
 import { Link } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -10,7 +9,7 @@ const Hero = () => {
         <Row
           // className="py-5 text-light  text-center text-sm-start align-items-lg-center flex-lg-row flex-column-reverse"
           // id="home"
-          className="text-light py-5 text-center text-sm-start  flex-md-row flex-column-reverse"
+          className="text-light py-5 text-center text-sm-start  flex-md-row flex-column-reverse align-items-center"
         >
           <Col lg="6" md="6" className="mt-sm-3">
             <div>
