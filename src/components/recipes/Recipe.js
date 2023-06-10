@@ -62,7 +62,7 @@ const Recipe = ({ recipe }) => {
               style={{ fontSize: "18px" }}
               className="rounded bg-warning border-0 px-lg-3 py-lg-2 px-md-2 py-md-2 px-sm-2 py-sm-2 px-3 py-2"
             >
-              Details
+              View
             </button>
           </div>
         </div>

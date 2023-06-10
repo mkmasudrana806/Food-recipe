@@ -24,6 +24,10 @@ const Chef = ({ chef }) => {
               {chef.rating}
             </p>
           </div>
+          <p className="mb-1">
+              <strong>Likes: </strong>
+              {chef.likes}
+            </p>
           <div className="d-flex my-2 justify-content-between ">
             <button
               style={{ fontSize: "18px" }}
