@@ -8,8 +8,8 @@ const Content = () => {
   return (
     <div>
       <Hero></Hero>
-      {/* <Chefs></Chefs> */}
-      {/* <Recipes></Recipes> */}
+      <Chefs></Chefs>
+      <Recipes></Recipes>
       <ClientContainer></ClientContainer>
     </div>
   );
