@@ -1,9 +1,9 @@
 
 @media screen and (max-width:576px) {
-    .chef-image{
+    .recipe-image{
         height: 320px !important;
     }
-    .chef{
+    .recipe{
         margin-top: 30px;
     }
 }

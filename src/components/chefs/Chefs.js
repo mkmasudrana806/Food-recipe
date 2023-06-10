@@ -6,12 +6,16 @@ import { Container, Row } from "react-bootstrap";
 
 const Chefs = () => {
   const { chefs } = useContext(DataContext);
-  console.log(chefs);
-
   return (
-    <div className="mt-5 bg-dark bg-opacity-75">
-      <Container>
-        <h3 className="text-white fs-1 text-center pt-3">Our Chefs</h3>
+    <div id="chefs" className="mt-5 bg-dark bg-opacity-75 my-5">
+      <Container className="mb-5 pb-5">
+        <div className="text-center pt-4 text-white">
+          <h3 className=" fs-1 ">Our Chefs</h3>
+          <p>
+            We ensure Qualitifull Services. we have Experiences Chefs for many
+            recipes
+          </p>
+        </div>
         <Row className="justify-content-center mt-4">
           {chefs?.chefs?.map((chef) => (
             <Chef key={chef.id} chef={chef}></Chef>
