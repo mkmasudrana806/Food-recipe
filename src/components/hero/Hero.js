@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Hero = () => {
   return (
-    <div className="bg-dark bg-opacity-75">
+    <div className="bg-dark bg-opacity-75 mt-5 pt-3">
       <Container>
         <Row
           // className="py-5 text-light  text-center text-sm-start align-items-lg-center flex-lg-row flex-column-reverse"

@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
         setRecipes(recipesData);
         setChefs(chefsData);
       } catch (error) {
-        console.log(error);
+       
       }
     };
 

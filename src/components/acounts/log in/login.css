@@ -1,0 +1,17 @@
+.google-signin, .github-signin{
+    margin-top: 10px;
+    padding: 9px 10px;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.github-signin img, .google-signin img{
+    height: 25px;
+}
+.github-signin, .google-signin{
+    display: flex;
+    align-items: center;
+}
+.github-signin p , .google-signin p {
+    margin-bottom: 0px;
+}

@@ -5,7 +5,6 @@ import { DataContext } from "../context/DataProvider";
 
 const Recipe = ({ recipe }) => {
   const { chefs } = useContext(DataContext);
-  console.log(chefs);
   const {
     recipe_id,
     chef_id,
@@ -17,7 +16,6 @@ const Recipe = ({ recipe }) => {
     name,
   } = recipe;
   let chef = chefs?.chefs?.find((chef) => chef.id === chef_id);
-  console.log(chef);
   return (
     // recipe cart
     <Col xl="3" lg="4" md="4" sm="6" xs="12" className="p-2 chef">
