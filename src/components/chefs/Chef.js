@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Col } from "react-bootstrap";
 import "./chef.css";
+import { DataContext } from "../context/DataProvider";
 
 const Chef = ({ chef }) => {
+  const { recipes } = useContext(DataContext);
+  let { id } = chef;
+  let totalRecipes = recipes.recipes.filter((recipe) => recipe.chef_id === id);
+
   return (
     // chef cart
     <Col xl="3" lg="4" md="4" sm="6" xs="12" className="p-2 chef">
@@ -19,7 +24,7 @@ const Chef = ({ chef }) => {
           <img className="h-100 w-100 rounded" src={chef.photo} alt="" />
         </div>
         {/* chef info body  */}
-        <div className="mt-3 p-1">
+        <div className="mt-2 p-1">
           <h4>{chef.name}</h4>
           <p className="mb-1">{chef.description.slice(0, 85)} ...</p>
           <div className="d-flex justify-content-between">
@@ -32,10 +37,17 @@ const Chef = ({ chef }) => {
               {chef.rating}
             </p>
           </div>
-          <p className="mb-1">
-            <strong>Likes: </strong>
-            {chef.likes}
-          </p>
+          <div className="d-flex justify-content-between">
+            <p className="mb-1">
+              <strong>Likes: </strong>
+              {chef.likes}
+            </p>
+            <p className="mb-1">
+              <strong>Recipes: </strong>
+              {totalRecipes.length}
+            </p>
+          </div>
+
           <div className="d-flex my-2 justify-content-between ">
             <button
               style={{ fontSize: "18px", backgroundColor: "#afafaf" }}

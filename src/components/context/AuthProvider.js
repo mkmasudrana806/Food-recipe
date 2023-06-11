@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import app from "../firebase/firebase.init";
 
@@ -46,9 +47,21 @@ const AuthProvider = ({ children }) => {
   const signInGitHub = () => {
     return signInWithPopup(auth, gitHubProvider);
   };
+
+  // log out user
+  const logOut = () => {
+    return signOut(auth);
+  };
   // auth context value
-  const authInfo = { createUser, logInUser, user, signInGoogle, signInGitHub };
-  console.log(user);
+  const authInfo = {
+    createUser,
+    logInUser,
+    user,
+    signInGoogle,
+    signInGitHub,
+    logOut,
+  };
+  
   return (
     <div>
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

@@ -15,14 +15,17 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photourl = form.photourl.value;
-    console.log(name, email, password, photourl);
 
     // validity check and create new user
-    if (name && email && password.length > 5 && photourl) {
+    if (name && email && password && photourl) {
+      if (password.length < 6) {
+        setError("Password must be at least 6 character");
+        return;
+      }
+      setError("");
       createUser(email, password)
         .then((result) => {
           updateNameAndPhoto(result.user, name, photourl);
-          console.log("user created successfully and photo and name updated");
         })
         .catch((error) => console.log(error));
     } else {
@@ -58,7 +61,7 @@ const Register = () => {
         >
           <form onSubmit={handleRegister}>
             <h3 className="text-center">Register New Accout</h3>
-            <div className="mb-3">
+            <div className="my-3">
               <label className="form-label">Your Name</label>
               <input
                 name="name"
@@ -104,7 +107,10 @@ const Register = () => {
           <strong className="text-danger">{error ? error : ""}</strong>
           <h5 className="text-center mt-2">
             I have already account ?{" "}
-            <Link className="primary-text-color text-decoration-none" to="/login">
+            <Link
+              className="primary-text-color text-decoration-none"
+              to="/login"
+            >
               {" "}
               Login
             </Link>
