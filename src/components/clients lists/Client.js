@@ -1,4 +1,4 @@
-import {faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Col } from "react-bootstrap";
@@ -7,7 +7,9 @@ const Client = ({ chef }) => {
   return (
     // client cart
     <Col xl="3" lg="4" md="4" sm="6" xs="12" className="p-2">
-      <div className="bg-warning rounded text-center">
+      <div
+        className="primary-bg rounded text-center"
+      >
         <div className="d-flex justify-content-center pt-3">
           <img
             style={{ height: "150px", borderRadius: "50%" }}

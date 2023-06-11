@@ -35,12 +35,12 @@ const Header = () => {
               {user?.uid ? (
                 <>
                   {" "}
-                  <button className="border-0 px-3  rounded bg-secondary">
+                  <button className="secondary-btn">
                     Log Out
                   </button>
                   <button
                     style={{ height: "45px", width: "45px" }}
-                    className="bg-white fs-2 rounded-circle border-0 ms-3"
+                    className="bg-white fs-3 rounded-circle border-0 ms-3"
                   >
                     <FontAwesomeIcon icon={faUserLarge}></FontAwesomeIcon>
                   </button>

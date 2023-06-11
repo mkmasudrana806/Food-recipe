@@ -7,9 +7,9 @@ const ClientContainer = () => {
   // here i am using fake data similar as chefs info.
   const { chefs } = useContext(DataContext);
   return (
-    <div>
+    <div className="bg-dark bg-opacity-75">
       <Container>
-        <div id="chefs" className="mt-5 bg-dark bg-opacity-75 my-5">
+        <div id="chefs" className="mt-5  my-5 rounded">
           <Container className="mb-5 pb-5">
             <div className="text-center pt-4 text-white">
               <h3 className=" fs-1 ">Client Testmonial</h3>

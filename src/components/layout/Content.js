@@ -9,11 +9,10 @@ const Content = () => {
   return (
     <div>
       <Hero></Hero>
-      {/* <Chefs></Chefs>
-      <Recipes></Recipes>
-      <ClientContainer></ClientContainer> */}
+      <Chefs></Chefs>
       <Services></Services>
-
+      <Recipes></Recipes>
+      <ClientContainer></ClientContainer>
     </div>
   );
 };

@@ -43,7 +43,6 @@ const Register = () => {
           console.log(error.error);
         });
     };
-    
   };
 
   return (
@@ -98,14 +97,14 @@ const Register = () => {
                 placeholder="Your Photo URL"
               />
             </div>
-            <button type="submit" className="btn btn-warning fs-5 w-100 mb-3 ">
+            <button type="submit" className="primary-btn fs-5 w-100 mb-3 ">
               Register
             </button>
           </form>
           <strong className="text-danger">{error ? error : ""}</strong>
           <h5 className="text-center mt-2">
             I have already account ?{" "}
-            <Link className="text-warning text-decoration-none" to="/login">
+            <Link className="primary-text-color text-decoration-none" to="/login">
               {" "}
               Login
             </Link>

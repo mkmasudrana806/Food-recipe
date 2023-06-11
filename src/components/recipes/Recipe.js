@@ -29,7 +29,7 @@ const Recipe = ({ recipe }) => {
         //   boxShadow:
         //     "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
         // }}
-        className="rounded recipe border border-dark border-opacity-75"
+        className="rounded recipe border border-dark border-opacity-7"
       >
         <div style={{ height: "190px" }} className="chef-image">
           <img className="h-100 w-100 rounded" src={photo} alt="" />
@@ -50,16 +50,10 @@ const Recipe = ({ recipe }) => {
             </p>
           </div>
           <div className="d-flex my-2 justify-content-between ">
-            <button
-              style={{ fontSize: "18px" }}
-              className="rounded bg-warning border-0 px-lg-3 py-lg-2 px-md-2 py-md-2 px-sm-2 py-sm-2 px-3 py-2"
-            >
+            <button className=" primary-btn">
               Add to favorite
             </button>
-            <button
-              style={{ fontSize: "18px" }}
-              className="rounded bg-warning border-0 px-lg-3 py-lg-2 px-md-2 py-md-2 px-sm-2 py-sm-2 px-3 py-2"
-            >
+            <button className="primary-btn">
               View
             </button>
           </div>

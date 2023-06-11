@@ -8,8 +8,9 @@ import "./login.css";
 
 const LogIn = () => {
   const [error, setError] = useState(null);
-  const { logInUser } = useContext(AuthContext);
+  const { logInUser, signInGoogle, signInGitHub } = useContext(AuthContext);
 
+  // handle email and password sign in
   const handleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -27,6 +28,21 @@ const LogIn = () => {
       });
   };
 
+  // handle google sigin in mehtod
+  const handleGoogleSignIn = () => {
+    signInGoogle()
+      .then((result) => {
+        // console.log(result.user);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  // handle GitHub sign in method
+  const handleGitHubSignIn = () => {
+    signInGitHub()
+      .then((result) => console.log(result.user))
+      .catch((error) => console.log(error));
+  };
   return (
     <Container className="mt-5 pt-3">
       <Row className="justify-content-center">
@@ -63,25 +79,34 @@ const LogIn = () => {
               />
             </div>
 
-            <button type="submit" className="btn btn-warning fs-5 w-100 mb-3 ">
+            <button type="submit" className="primary-btn fs-5 w-100 mb-3 ">
               Log In
             </button>
           </form>
           <strong className="text-danger">{error ? error : ""}</strong>
           <h5 className="text-center mt-2">
-            I have already account ?{" "}
-            <Link className="text-warning text-decoration-none" to="/login">
+            Don't have any account ?{" "}
+            <Link
+              className="primary-text-color text-decoration-none"
+              to="/register"
+            >
               {" "}
-              Login
+              Register
             </Link>
           </h5>
           <p className="text-center">OR</p>
 
-          <button className="google-signin bg-primary w-100 border-0">
+          <button
+            onClick={handleGoogleSignIn}
+            className="google-signin bg-primary w-100 border-0"
+          >
             <img src={googleIcon} alt="" />
             <p className="ms-5">Continue With Google</p>
           </button>
-          <button className="github-signin bg-primary w-100 border-0">
+          <button
+            onClick={handleGitHubSignIn}
+            className="github-signin bg-primary w-100 border-0"
+          >
             <img src={gitHubIcon} alt="" />
             <p className="ms-5">Continue with GitHub</p>
           </button>

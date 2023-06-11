@@ -1,3 +1,43 @@
 p{
   font-size: 17px;
 }
+
+/* all primary style */
+.primary-bg{
+  background-color: orange;
+}
+.primary-text-color{
+  color: orange;
+}
+.primary-font-size{
+  font-size: 18px;
+}
+
+.primary-btn{
+  height: 45px;
+  padding: 5px 15px;
+  background-color: orange;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 0;
+}
+.primary-btn:hover{
+  background-color: #ec9b03;
+}
+/* all secondary style  */
+
+.secondary-bg-color{
+  background-color: gray;
+}
+.secondary-bg-color{
+color: #afafaf;
+}
+
+.secondary-btn{
+  height: 45px;
+  padding: 5px 15px;
+  background-color: #afafaf;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 0;
+}

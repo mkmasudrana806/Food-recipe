@@ -22,9 +22,7 @@ const Services = () => {
                   timeframe,ensuring that your meal is delivered on time
                 </p>
                 <Link to={"/register"}>
-                  <button className="btn btn-warning text-dark btn-lg">
-                    Register Now
-                  </button>
+                  <button className="primary-btn">Register Now</button>
                 </Link>
               </div>
             </div>
@@ -43,9 +41,7 @@ const Services = () => {
                   fridge or freezer, making it easy to eat nutritious meals
                 </p>
                 <Link to={"/register"}>
-                  <button className="btn btn-warning text-dark btn-lg">
-                    Register Now
-                  </button>
+                  <button className="primary-btn">Register Now</button>
                 </Link>
               </div>
             </div>
@@ -64,9 +60,7 @@ const Services = () => {
                   to prepare while still packing plenty of flavor
                 </p>
                 <Link to={"/register"}>
-                  <button className="btn btn-warning text-dark btn-lg">
-                    Register Now
-                  </button>
+                  <button className="primary-btn">Register Now</button>
                 </Link>
               </div>
             </div>

@@ -14,7 +14,7 @@ const Hero = () => {
           <Col lg="6" md="6" className="mt-sm-3">
             <div>
               <h1>
-                Become a <span className="text-warning">Chef</span>
+                Become a <span className="primary-text-color">Chef</span>
               </h1>
               <p className="lead my-4 ">
                 Unleash your culinary potential and become a chef
@@ -24,7 +24,10 @@ const Hero = () => {
               </p>
 
               <Link>
-                <button className="btn btn-light text- dark bg-warning border-0 btn-lg">
+                <button
+                  style={{ borderRadius: "50px" }}
+                  className="primary-btn"
+                >
                   Register Now
                 </button>
               </Link>
