@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <div style={{ marginBottom: "100px" }}>
+    <div style={{ marginBottom: "67px" }}>
       <Navbar
         collapseOnSelect
         expand="lg"

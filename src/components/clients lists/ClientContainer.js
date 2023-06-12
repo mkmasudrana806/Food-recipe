@@ -18,7 +18,7 @@ const ClientContainer = () => {
               </p>
             </div>
             <Row className="justify-content-center mt-4">
-          {chefs?.chefs?.map((chef) => (
+          {chefs?.chefs?.slice(0, 4).map((chef) => (
             <Client key={chef.id} chef={chef}></Client>
           ))}
         </Row>

@@ -7,8 +7,8 @@ import Recipe from "./Recipe";
 const Recipes = () => {
   const { recipes } = useContext(DataContext);
   return (
-    <div id="recipes" className="my-5">
-      <Container className="mb-5 pb-5">
+    <div className="mt-5 pt-4">
+      <Container>
         <div className="text-center">
           <h3 className=" fs-1 ">Our Recipes</h3>
           <p>

@@ -38,6 +38,13 @@ color: #afafaf;
   padding: 5px 15px;
   background-color: #afafaf;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 0;
+  text-decoration: none;
+  color: black;
+}
+.secondary-btn a{
+ text-decoration: none;
+ color: black;
+ font-size: 18px;
 }

@@ -7,8 +7,8 @@ import { Container, Row } from "react-bootstrap";
 const Chefs = () => {
   const { chefs } = useContext(DataContext);
   return (
-    <div id="chefs" className="mt-5 bg-dark bg-opacity-75 my-5">
-      <Container className="mb-5 pb-5">
+    <div id="chefs" className="mt-5 bg-dark bg-opacity-75">
+      <Container className=" pb-5">
         <div className="text-center pt-4 text-white">
           <h3 className=" fs-1 ">Our Chefs</h3>
           <p>
