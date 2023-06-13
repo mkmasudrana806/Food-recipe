@@ -2,3 +2,10 @@
     text-decoration: none;
     margin-left: 20px;
 }
+
+.pending{
+    border-bottom:3px solid red;
+}
+.active{
+border-bottom:3px solid #afafaf;
+}

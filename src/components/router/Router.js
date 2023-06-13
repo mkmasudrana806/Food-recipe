@@ -9,6 +9,7 @@ import LogIn from "../acounts/log in/LogIn";
 import RecipeDetailsContainer from "../recipe details/RecipeDetailsContainer";
 import PageNotFound from "../page not found/PageNotFound";
 import PrivateRoute from "../private route/PrivateRoute";
+import Blogs from "../blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes></Recipes>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
       {
         path: "/recipes/chef/:id",

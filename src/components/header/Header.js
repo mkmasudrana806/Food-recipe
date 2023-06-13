@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserLarge } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { hover } from "@testing-library/user-event/dist/hover";
 
@@ -45,9 +45,30 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav" className="fs-5">
             <Nav className="me-auto nav-items">
               <Link to="/home">Home</Link>
-              <Link to="/chefs">Chefs</Link>
-              <Link to="/recipes">Recipes</Link>
-              <Link to="/blogs">Blogs</Link>
+              <NavLink
+                to="/chefs"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Chefs
+              </NavLink>
+              <NavLink
+                to="/recipes"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Recipes
+              </NavLink>
+              <NavLink
+                to="/blogs"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Blogs
+              </NavLink>
               <Link>{user?.displayName}</Link>
             </Nav>
             <Nav className="nav-items">
