@@ -3,6 +3,8 @@ import { Col } from "react-bootstrap";
 import "./chef.css";
 import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Chef = ({ chef }) => {
   const { recipes } = useContext(DataContext);
@@ -24,7 +26,12 @@ const Chef = ({ chef }) => {
       >
         {/* <div className="bg-dark bg-opacity-50 text-white rounded chef"> */}
         <div style={{ height: "240px" }} className="chef-image">
-          <img className="h-100 w-100 rounded" src={chef.photo} alt="" />
+          <LazyLoadImage
+            src={chef.photo}
+            className="h-100 w-100 rounded"
+            alt="Image Alt"
+            effect="blur"
+          />
         </div>
         {/* chef info body  */}
         <div className="mt-2 p-1">

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import googleIcon from "../../../googleLogo.png";
 import gitHubIcon from "../../../githubLogo.png";
@@ -9,6 +9,10 @@ import "./login.css";
 const LogIn = () => {
   const [error, setError] = useState(null);
   const { logInUser, signInGoogle, signInGitHub } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   // handle email and password sign in
   const handleSignIn = (event) => {
@@ -19,8 +23,9 @@ const LogIn = () => {
     console.log(email, password);
     logInUser(email, password)
       .then((userCredential) => {
-        console.log(userCredential);
-        console.log("login successful");
+        setError("");
+        form.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);

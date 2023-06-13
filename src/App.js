@@ -1,21 +1,28 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./components/router/Router";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <div className="app">
+      <RouterProvider router={router}></RouterProvider>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </div>
+  );
 }
 
 export default App;
-
-/*
-get single recipe by id:  http://localhost:3000/recipe/2
-get all recipe : http://localhost:3000/recipes
-get all recipe : http://localhost:3000
-
-chefs:
-get all chefs : http://localhost:3000/chefs
-get single chef by id recipe : http://localhost:3000/chef/1
-get chef all recipes : http://localhost:3000/chef/recipes/id
-*/

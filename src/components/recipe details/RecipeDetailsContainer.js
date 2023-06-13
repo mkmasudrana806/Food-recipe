@@ -14,7 +14,7 @@ const RecipeDetailsContainer = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const recipeId = searchParams.get("recipeId");
-  console.log(recipeId);
+
   useEffect(() => {
     fetch(`http://localhost:5000/recipe/${recipeId}`)
       .then((res) => res.json())
@@ -30,6 +30,7 @@ const RecipeDetailsContainer = () => {
             chef={chefData}
             totalRecipes={recipesData.length}
           ></ChefDetailsCart>
+          <h4 className="mt-5">Recipe Details: </h4>
           <div className="recipe-details mt-5">
             <RecipeDetails recipe={recipe}></RecipeDetails>
           </div>

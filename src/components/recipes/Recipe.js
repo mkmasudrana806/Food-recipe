@@ -1,13 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./recipe.css";
 import { Col } from "react-bootstrap";
 import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
+
 
 const Recipe = ({ recipe }) => {
+  const [disable, setDisable] = useState(false);
   const { chefs } = useContext(DataContext);
   const { chef_id, method, photo, name, recipe_id } = recipe;
   let chef = chefs?.chefs?.find((chef) => chef.id === chef_id);
+
+  const favoriteBtnDisable = () => {
+    toast.success("Recipe Added to the Favorite List!");
+    setDisable(true);
+  };
   return (
     // recipe cart
     <Col xl="3" lg="4" md="4" sm="6" xs="12" className="p-2 chef recipe-cart">
@@ -31,7 +40,13 @@ const Recipe = ({ recipe }) => {
             </p>
           </div>
           <div className="d-flex my-2 justify-content-between ">
-            <button className=" primary-btn">Add to favorite</button>
+            {disable ? (
+              ""
+            ) : (
+              <button onClick={favoriteBtnDisable} className=" primary-btn">
+                Add to favorite
+              </button>
+            )}
             <Link
               to={`/recipes/chef/${chef_id}?recipeId=${recipe_id}`}
               className="primary-btn"

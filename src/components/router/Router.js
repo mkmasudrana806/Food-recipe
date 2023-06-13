@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Content from "../layout/Content";
@@ -7,6 +7,8 @@ import Chefs from "../chefs/Chefs";
 import Register from "../acounts/register/Register";
 import LogIn from "../acounts/log in/LogIn";
 import RecipeDetailsContainer from "../recipe details/RecipeDetailsContainer";
+import PageNotFound from "../page not found/PageNotFound";
+import PrivateRoute from "../private route/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +35,6 @@ export const router = createBrowserRouter([
         path: "/recipes/chef/:id",
         loader: async ({ params }) => {
           try {
-            console.log(params);
             // recipes fetch
             const recipeResponse = await fetch(
               `http://localhost:5000/recipes/chef/${params.id}`
@@ -54,7 +55,11 @@ export const router = createBrowserRouter([
             throw new Error("Failed to fetch data");
           }
         },
-        element: <RecipeDetailsContainer></RecipeDetailsContainer>,
+        element: (
+          <PrivateRoute>
+            <RecipeDetailsContainer></RecipeDetailsContainer>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/register",
@@ -63,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <LogIn></LogIn>,
+      },
+      {
+        path: "*",
+        element: <PageNotFound></PageNotFound>,
       },
     ],
   },
