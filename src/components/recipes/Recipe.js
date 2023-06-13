@@ -2,35 +2,16 @@ import React, { useContext } from "react";
 import "./recipe.css";
 import { Col } from "react-bootstrap";
 import { DataContext } from "../context/DataProvider";
+import { Link } from "react-router-dom";
 
 const Recipe = ({ recipe }) => {
   const { chefs } = useContext(DataContext);
-  const {
-    recipe_id,
-    chef_id,
-    ingredients,
-    method,
-    photo,
-    rating,
-    reciple_id,
-    name,
-  } = recipe;
+  const { chef_id, method, photo, name, recipe_id } = recipe;
   let chef = chefs?.chefs?.find((chef) => chef.id === chef_id);
   return (
     // recipe cart
     <Col xl="3" lg="4" md="4" sm="6" xs="12" className="p-2 chef recipe-cart">
-      <div
-        // style={{
-        //   boxShadow:
-        //     "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
-        //   borderRadius: "8px",
-        // }}
-        // style={{
-        //   boxShadow:
-        //     "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
-        // }}
-        className="rounded recipe border border-dark border-opacity-7"
-      >
+      <div className="rounded recipe border border-dark border-opacity-7">
         <div style={{ height: "190px" }} className="chef-image">
           <img className="h-100 w-100 rounded" src={photo} alt="" />
         </div>
@@ -50,12 +31,13 @@ const Recipe = ({ recipe }) => {
             </p>
           </div>
           <div className="d-flex my-2 justify-content-between ">
-            <button className=" primary-btn">
-              Add to favorite
-            </button>
-            <button className="primary-btn">
+            <button className=" primary-btn">Add to favorite</button>
+            <Link
+              to={`/recipes/chef/${chef_id}?recipeId=${recipe_id}`}
+              className="primary-btn"
+            >
               View
-            </button>
+            </Link>
           </div>
         </div>
       </div>

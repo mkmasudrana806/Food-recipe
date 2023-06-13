@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ChefDetailsCart = ({ chef, totalRecipes }) => {
-  console.log(chef);
   return (
     <div
       style={{

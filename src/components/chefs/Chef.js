@@ -54,7 +54,7 @@ const Chef = ({ chef }) => {
           <div className="d-flex my-2 justify-content-between ">
             <button className="secondary-btn">Add to favorite</button>
             <button className="secondary-btn">
-              <Link to={`/recipes/chef/${id}`}>Recipes</Link>
+              <Link to={`/recipes/chef/${id}?recipeId=${1}`}>Recipes</Link>
             </button>
           </div>
         </div>

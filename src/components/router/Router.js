@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Content from "../layout/Content";
@@ -33,6 +33,7 @@ export const router = createBrowserRouter([
         path: "/recipes/chef/:id",
         loader: async ({ params }) => {
           try {
+            console.log(params);
             // recipes fetch
             const recipeResponse = await fetch(
               `http://localhost:5000/recipes/chef/${params.id}`
@@ -44,7 +45,6 @@ export const router = createBrowserRouter([
               `http://localhost:5000/chef/${params.id}`
             );
             const chefData = await chefResponse.json();
-
             return {
               recipesData,
               chefData,
