@@ -5,6 +5,7 @@ import { AuthContext } from "../../context/AuthProvider";
 import googleIcon from "../../../googleLogo.png";
 import gitHubIcon from "../../../githubLogo.png";
 import "./login.css";
+import { toast } from "react-toastify";
 
 const LogIn = () => {
   const [error, setError] = useState(null);
@@ -23,13 +24,13 @@ const LogIn = () => {
     console.log(email, password);
     logInUser(email, password)
       .then((userCredential) => {
+        toast.success("Loagin Successfully");
         setError("");
         form.reset();
         navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
-        console.log("login korte problem hosse");
       });
   };
 
@@ -37,6 +38,7 @@ const LogIn = () => {
   const handleGoogleSignIn = () => {
     signInGoogle()
       .then((result) => {
+        navigate(from, { replace: true });
         // console.log(result.user);
       })
       .catch((error) => console.log(error));
@@ -45,7 +47,9 @@ const LogIn = () => {
   // handle GitHub sign in method
   const handleGitHubSignIn = () => {
     signInGitHub()
-      .then((result) => console.log(result.user))
+      .then((result) => {
+        navigate(from, { replace: true });
+      })
       .catch((error) => console.log(error));
   };
   return (

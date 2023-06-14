@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
 
   // create new user with email and password
   const createUser = (email, password) => {
-    setLoading(true);
+    setLoading(false);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -54,13 +54,13 @@ const AuthProvider = ({ children }) => {
   // observer for current user condition
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-        setLoading(false);
-      }
+      setUser(currentUser);
+      setLoading(false);
     });
-    return () => unSubscribe();
-  }, [user]);
+    return () => {
+      unSubscribe();
+    };
+  }, []);
 
   // auth context value
   const authInfo = {
@@ -71,6 +71,7 @@ const AuthProvider = ({ children }) => {
     signInGitHub,
     logOut,
     loading,
+    setLoading,
   };
 
   return (

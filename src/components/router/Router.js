@@ -42,13 +42,13 @@ export const router = createBrowserRouter([
           try {
             // recipes fetch
             const recipeResponse = await fetch(
-              `http://localhost:5000/recipes/chef/${params.id}`
+              `https://food-recipe-server-side.vercel.app/recipes/chef/${params.id}`
             );
             const recipesData = await recipeResponse.json();
 
             // chef fetch
             const chefResponse = await fetch(
-              `http://localhost:5000/chef/${params.id}`
+              `https://food-recipe-server-side.vercel.app/chef/${params.id}`
             );
             const chefData = await chefResponse.json();
             return {

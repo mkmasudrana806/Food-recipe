@@ -23,7 +23,7 @@ const Hero = () => {
                 of culinary craftsmanship.
               </p>
 
-              <Link>
+              <Link to='/register'>
                 <button
                   style={{ borderRadius: "50px" }}
                   className="primary-btn"

@@ -4,18 +4,21 @@ import { Col } from "react-bootstrap";
 import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-
-
+import { AuthContext } from "../context/AuthProvider";
 
 const Recipe = ({ recipe }) => {
   const [disable, setDisable] = useState(false);
   const { chefs } = useContext(DataContext);
+  const { setLoading } = useContext(AuthContext);
   const { chef_id, method, photo, name, recipe_id } = recipe;
   let chef = chefs?.chefs?.find((chef) => chef.id === chef_id);
 
   const favoriteBtnDisable = () => {
     toast.success("Recipe Added to the Favorite List!");
     setDisable(true);
+  };
+  const handleView = () => {
+    setLoading(false);
   };
   return (
     // recipe cart
@@ -48,6 +51,7 @@ const Recipe = ({ recipe }) => {
               </button>
             )}
             <Link
+              onClick={handleView}
               to={`/recipes/chef/${chef_id}?recipeId=${recipe_id}`}
               className="primary-btn"
             >

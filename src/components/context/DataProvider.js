@@ -10,14 +10,16 @@ const DataProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const [recipesData, chefsData] = await Promise.all([
-          fetch("http://localhost:5000/recipes").then((res) => res.json()),
-          fetch("http://localhost:5000/chefs").then((res) => res.json()),
+          fetch("https://food-recipe-server-side.vercel.app/recipes").then(
+            (res) => res.json()
+          ),
+          fetch("https://food-recipe-server-side.vercel.app/chefs").then(
+            (res) => res.json()
+          ),
         ]);
         setRecipes(recipesData);
         setChefs(chefsData);
-      } catch (error) {
-       
-      }
+      } catch (error) {}
     };
 
     fetchData();
@@ -32,23 +34,3 @@ const DataProvider = ({ children }) => {
 };
 
 export default DataProvider;
-
-/*
-const fetchData = async () => {
-      try {
-        const [apiResponse1, apiResponse2, apiResponse3] = await Promise.all([
-          fetch("/data/heroData.json").then((response) => response.json()),
-          fetch("/data/jobCategory.json").then((response) => response.json()),
-          fetch("/data/jobData.json").then((response) => response.json()),
-        ]);
-        setHero(apiResponse1);
-        setJobCategory(apiResponse2);
-        setJobs(apiResponse3);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-
-    */

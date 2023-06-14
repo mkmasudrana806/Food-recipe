@@ -7,3 +7,12 @@
         margin-top: 30px;
     }
 }
+
+.chef-image span{
+    height: 100%;
+    width: 100%;
+}
+.chef-image span img{
+    height: 100%;
+    width: 100%;
+}

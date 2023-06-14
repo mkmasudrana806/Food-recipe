@@ -16,11 +16,12 @@ const RecipeDetailsContainer = () => {
   const recipeId = searchParams.get("recipeId");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/recipe/${recipeId}`)
+    fetch(`https://food-recipe-server-side.vercel.app/recipe/${recipeId}`)
       .then((res) => res.json())
       .then((data) => setRecipe(data));
   }, [recipe]);
 
+  console.log(recipe);
   return (
     <Container className="mt-5 pt-4">
       <Row>
