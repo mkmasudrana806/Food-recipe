@@ -1,32 +1,9 @@
-### Important Project Link
 
-Client site repo link: https://github.com/mkmasudrana806/Food-recipe-client
-
-Server site repo link:  https://github.com/mkmasudrana806/Food-recipe-server
-
-Live site link: https://free-from-fare.web.app/
-
-### Project Information
-`Free from fare`  is for Food recipe solution web Application. where users can find there favorite chefs and recipes. user see recipe method and Ingredients
-
+### Project Overview
 Project Name: `Free From Fare`,
 
-Live Site Link: https://learn-programming-project.web.app/
+`Free from fare`  is for Food recipe solution web Application. where users can find their favorite chefs and recipes. Users can see recipe methods and Ingredients for making recipes. 
 
-Developed by `Web Technologies
-
-Project Type: `Web Application`
-
-Site Type: `Food Recipe Site`
-
-### Home Page
-![Home Page](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/3807e322-b400-42de-acfe-45720c52b4c8)
-
-### Chefs Section
-![Chefs section](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/c2351907-d427-411a-8dfc-5bd6d9986239)
-
-### Recipe Review
-![image](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/6a06c510-0911-4199-ab6b-464af2e4c678)
 
 ### Tools Technologies (Libary and Frameworks)
 
@@ -56,4 +33,21 @@ In the header section have `Home `, `Chefs`, and `Recipes` as well as `Blogs`, `
 
 In Log in and Register form has a toggle button and a `forgot password` system and sign in with the `Google and GitHub` systems.
 
-In the view recipes section has some features like when a user click on a recipe to see to the details. the recipe details page will show details of this recipe as well all the recipes from the same chef will be shown on the left side.
+The view recipes section has some features like when a user click on a recipe to see to the details. the recipe details page will show details of this recipe as well all the recipes from the same chef will be shown on the left side.
+
+### Important  Links of this Project
+Live site link: https://free-from-fare.web.app/
+
+Client site repo link: https://github.com/mkmasudrana806/Food-recipe-client
+
+Server site repo link:  https://github.com/mkmasudrana806/Food-recipe-server
+
+
+### Home Page
+![Home Page](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/3807e322-b400-42de-acfe-45720c52b4c8)
+
+### Chefs Section
+![Chefs section](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/c2351907-d427-411a-8dfc-5bd6d9986239)
+
+### Recipe Review
+![Recipe Review](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/6a06c510-0911-4199-ab6b-464af2e4c678)
