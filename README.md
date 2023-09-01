@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Overview
+Project Name: `Free From Fare`,
 
-## Available Scripts
+`Free from fare`  is for Food recipe solution web Application. where users can find their favorite chefs and recipes. Users can see recipe methods and Ingredients for making recipes. 
 
-In the project directory, you can run:
 
-### `npm start`
+### Tools Technologies (Libary and Frameworks)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. VS code
+2. HTML, CSS, JAVASCRIPT, REACT, NODE.JS, EXPRESS.JS,
+3. Google Firebase for authentication
+4. Vercel for Server side data hosting
+5. react-router-dom, context API, react-toastify, html2pdf, etc
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features of This project
 
-### `npm test`
+1. Chefs with recipes show
+2. Private Route
+3. Firebase Authentication system with provider login system
+4. Mobile, Tablet, iPad, laptop, and desktop 100% responsive
+5. Recipe view with chef and chef All the recipes show
+6. Print blogs as pdf
+7. active route
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Discussion of this project
 
-### `npm run build`
+I have developed a cooking web application. in this application I have added some chefs and with their recipes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+in The home page has a chefs section, recipes, client testimonials, and a footer and services section by default.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the header section have `Home `, `Chefs`, and `Recipes` as well as `Blogs`, `Log out`, `Register`, and `Profile icons`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In Log in and Register form has a toggle button and a `forgot password` system and sign in with the `Google and GitHub` systems.
 
-### `npm run eject`
+The view recipes section has some features like when a user click on a recipe to see to the details. the recipe details page will show details of this recipe as well all the recipes from the same chef will be shown on the left side.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Important  Links of this Project
+Live site link: https://free-from-fare.web.app/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Client site repo link: https://github.com/mkmasudrana806/Food-recipe-client
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Server site repo link:  https://github.com/mkmasudrana806/Food-recipe-server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Home Page
+![Home Page](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/3807e322-b400-42de-acfe-45720c52b4c8)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Chefs Section
+![Chefs section](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/c2351907-d427-411a-8dfc-5bd6d9986239)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Recipe Review
+![Recipe Review](https://github.com/mkmasudrana806/Food-recipe-client/assets/86706671/6a06c510-0911-4199-ab6b-464af2e4c678)
